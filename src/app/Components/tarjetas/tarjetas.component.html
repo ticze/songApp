@@ -1,0 +1,13 @@
+<div class="col-12 animated fadeIn">
+  <div class="card-columns">
+    <div *ngFor="let item of items" class="card puntero">
+      <img [src]="item.images | noimage" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center">{{ item.name }}</h5>
+        <p class="card-text ">
+          <span *ngFor="let artista of item.artists" class="badge badge-pill badge-info">{{ artista.name }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
